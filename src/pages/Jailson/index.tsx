@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Styles from "./styles.module.css";
 
 export default function Home() {
   const [code, setCode] = useState("");
@@ -11,7 +12,7 @@ export default function Home() {
   async function handleSubmit(e: any) {
     e.preventDefault();
 
-    const response = await fetch(`/api/chat-gpt/`, {
+    const response = await fetch(`../api/chat-gpt-conversation/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,12 +30,19 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <textarea onChange={handleChange}></textarea>
-        <button type="submit">Consultar</button>
+    <div className={Styles.content}>
+      <form className={Styles.formulario} onSubmit={handleSubmit}>
+        <textarea
+          className={Styles.textarea}
+          onChange={handleChange}
+        ></textarea>
+        <button className={Styles.btn} type="submit">
+          Consultar
+        </button>
       </form>
-      <p>{result}</p>
+      <div className={Styles.resultado}>
+        <p>{result}</p>
+      </div>
     </div>
   );
 }

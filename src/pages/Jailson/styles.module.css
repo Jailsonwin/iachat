@@ -1,0 +1,61 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.textarea {
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  resize: none;
+  border-radius: 16px;
+}
+
+.btn {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.resultado {
+  height: 200px;
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  resize: none;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .formulario {
+    width: 90%;
+    max-width: 500px;
+  }
+  .resultado {
+    width: 90%;
+  }
+}
